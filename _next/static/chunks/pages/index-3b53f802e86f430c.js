@@ -1,760 +1,1985 @@
-
-
-(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([[888], {
-    2711: function(a) {
-        !function(b, c) {
-            a.exports = c()
-        }(this, function() {
-            return function(a) {
-                function b(d) {
-                    if (c[d])
-                        return c[d].exports;
-                    var e = c[d] = {
-                        exports: {},
-                        id: d,
-                        loaded: !1
-                    };
-                    return a[d].call(e.exports, e, e.exports, b),
-                    e.loaded = !0,
-                    e.exports
-                }
-                var c = {};
-                return b.m = a,
-                b.c = c,
-                b.p = "dist/",
-                b(0)
-            }([function(a, b, c) {
-                "use strict";
-                function d(a) {
-                    return a && a.__esModule ? a : {
-                        default: a
-                    }
-                }
-                var e = Object.assign || function(a) {
-                    for (var b = 1; b < arguments.length; b++) {
-                        var c = arguments[b];
-                        for (var d in c)
-                            Object.prototype.hasOwnProperty.call(c, d) && (a[d] = c[d])
-                    }
-                    return a
-                }
-                  , f = c(1)
-                  , g = (d(f),
-                c(6))
-                  , h = d(g)
-                  , i = c(7)
-                  , j = d(i)
-                  , k = c(8)
-                  , l = d(k)
-                  , m = c(9)
-                  , n = d(m)
-                  , o = c(10)
-                  , p = d(o)
-                  , q = c(11)
-                  , r = d(q)
-                  , s = c(14)
-                  , t = d(s)
-                  , u = []
-                  , v = !1
-                  , w = {
-                    offset: 120,
-                    delay: 0,
-                    easing: "ease",
-                    duration: 400,
-                    disable: !1,
-                    once: !1,
-                    startEvent: "DOMContentLoaded",
-                    throttleDelay: 99,
-                    debounceDelay: 50,
-                    disableMutationObserver: !1
-                }
-                  , x = function() {
-                    var a = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                    if (a && (v = !0),
-                    v)
-                        return u = (0,
-                        r.default)(u, w),
-                        (0,
-                        p.default)(u, w.once),
-                        u
-                }
-                  , y = function() {
-                    u = (0,
-                    t.default)(),
-                    x()
-                }
-                  , z = function() {
-                    u.forEach(function(a, b) {
-                        a.node.removeAttribute("data-aos"),
-                        a.node.removeAttribute("data-aos-easing"),
-                        a.node.removeAttribute("data-aos-duration"),
-                        a.node.removeAttribute("data-aos-delay")
-                    })
-                }
-                  , A = function(a) {
-                    w = e(w, a),
-                    u = (0,
-                    t.default)();
-                    var b, c = document.all && !window.atob;
-                    return !0 === (b = w.disable) || "mobile" === b && n.default.mobile() || "phone" === b && n.default.phone() || "tablet" === b && n.default.tablet() || "function" == typeof b && !0 === b() || c ? z() : (w.disableMutationObserver || l.default.isSupported() || (console.info('\n      aos: MutationObserver is not supported on this browser,\n      code mutations observing has been disabled.\n      You may have to call "refreshHard()" by yourself.\n    '),
-                    w.disableMutationObserver = !0),
-                    document.querySelector("body").setAttribute("data-aos-easing", w.easing),
-                    document.querySelector("body").setAttribute("data-aos-duration", w.duration),
-                    document.querySelector("body").setAttribute("data-aos-delay", w.delay),
-                    "DOMContentLoaded" === w.startEvent && ["complete", "interactive"].indexOf(document.readyState) > -1 ? x(!0) : "load" === w.startEvent ? window.addEventListener(w.startEvent, function() {
-                        x(!0)
-                    }) : document.addEventListener(w.startEvent, function() {
-                        x(!0)
-                    }),
-                    window.addEventListener("resize", (0,
-                    j.default)(x, w.debounceDelay, !0)),
-                    window.addEventListener("orientationchange", (0,
-                    j.default)(x, w.debounceDelay, !0)),
-                    window.addEventListener("scroll", (0,
-                    h.default)(function() {
-                        (0,
-                        p.default)(u, w.once)
-                    }, w.throttleDelay)),
-                    w.disableMutationObserver || l.default.ready("[data-aos]", y),
-                    u)
-                };
-                a.exports = {
-                    init: A,
-                    refresh: x,
-                    refreshHard: y
-                }
-            }
-            , function(a, b) {}
-            , , , , , function(a, b) {
-                (function(b) {
-                    "use strict";
-                    function c(a) {
-                        var b = void 0 === a ? "undefined" : e(a);
-                        return !!a && ("object" == b || "function" == b)
-                    }
-                    function d(a) {
-                        if ("number" == typeof a)
-                            return a;
-                        if ("symbol" == (void 0 === (b = a) ? "undefined" : e(b)) || (d = b) && "object" == (void 0 === d ? "undefined" : e(d)) && q.call(b) == h)
-                            return g;
-                        if (c(a)) {
-                            var b, d, f = "function" == typeof a.valueOf ? a.valueOf() : a;
-                            a = c(f) ? f + "" : f
-                        }
-                        if ("string" != typeof a)
-                            return 0 === a ? a : +a;
-                        a = a.replace(i, "");
-                        var n = k.test(a);
-                        return n || l.test(a) ? m(a.slice(2), n ? 2 : 8) : j.test(a) ? g : +a
-                    }
-                    var e = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(a) {
-                        return typeof a
-                    }
-                    : function(a) {
-                        return a && "function" == typeof Symbol && a.constructor === Symbol && a !== Symbol.prototype ? "symbol" : typeof a
-                    }
-                      , f = "Expected a function"
-                      , g = NaN
-                      , h = "[object Symbol]"
-                      , i = /^\s+|\s+$/g
-                      , j = /^[-+]0x[0-9a-f]+$/i
-                      , k = /^0b[01]+$/i
-                      , l = /^0o[0-7]+$/i
-                      , m = parseInt
-                      , n = "object" == (void 0 === b ? "undefined" : e(b)) && b && b.Object === Object && b
-                      , o = "object" == ("undefined" == typeof self ? "undefined" : e(self)) && self && self.Object === Object && self
-                      , p = n || o || Function("return this")()
-                      , q = Object.prototype.toString
-                      , r = Math.max
-                      , s = Math.min
-                      , t = function() {
-                        return p.Date.now()
-                    };
-                    a.exports = function(a, b, e) {
-                        var g = !0
-                          , h = !0;
-                        if ("function" != typeof a)
-                            throw TypeError(f);
-                        return c(e) && (g = "leading"in e ? !!e.leading : g,
-                        h = "trailing"in e ? !!e.trailing : h),
-                        function(a, b, e) {
-                            function g(b) {
-                                var c = l
-                                  , d = m;
-                                return l = m = void 0,
-                                u = b,
-                                o = a.apply(d, c)
-                            }
-                            function h(a) {
-                                var c = a - q
-                                  , d = a - u;
-                                return void 0 === q || c >= b || c < 0 || w && d >= n
-                            }
-                            function i() {
-                                var a, c, d, e, f = t();
-                                return h(f) ? j(f) : void (p = setTimeout(i, (c = (a = f) - q,
-                                d = a - u,
-                                e = b - c,
-                                w ? s(e, n - d) : e)))
-                            }
-                            function j(a) {
-                                return p = void 0,
-                                x && l ? g(a) : (l = m = void 0,
-                                o)
-                            }
-                            function k() {
-                                var a, c = t(), d = h(c);
-                                if (l = arguments,
-                                m = this,
-                                q = c,
-                                d) {
-                                    if (void 0 === p)
-                                        return u = a = q,
-                                        p = setTimeout(i, b),
-                                        v ? g(a) : o;
-                                    if (w)
-                                        return p = setTimeout(i, b),
-                                        g(q)
-                                }
-                                return void 0 === p && (p = setTimeout(i, b)),
-                                o
-                            }
-                            var l, m, n, o, p, q, u = 0, v = !1, w = !1, x = !0;
-                            if ("function" != typeof a)
-                                throw TypeError(f);
-                            return b = d(b) || 0,
-                            c(e) && (v = !!e.leading,
-                            w = "maxWait"in e,
-                            n = w ? r(d(e.maxWait) || 0, b) : n,
-                            x = "trailing"in e ? !!e.trailing : x),
-                            k.cancel = function() {
-                                void 0 !== p && clearTimeout(p),
-                                u = 0,
-                                l = q = m = p = void 0
-                            }
-                            ,
-                            k.flush = function() {
-                                return void 0 === p ? o : j(t())
-                            }
-                            ,
-                            k
-                        }(a, b, {
-                            leading: g,
-                            maxWait: b,
-                            trailing: h
-                        })
-                    }
-                }
-                ).call(b, function() {
-                    return this
-                }())
-            }
-            , function(a, b) {
-                (function(b) {
-                    "use strict";
-                    function c(a) {
-                        var b = void 0 === a ? "undefined" : e(a);
-                        return !!a && ("object" == b || "function" == b)
-                    }
-                    function d(a) {
-                        if ("number" == typeof a)
-                            return a;
-                        if ("symbol" == (void 0 === (b = a) ? "undefined" : e(b)) || (d = b) && "object" == (void 0 === d ? "undefined" : e(d)) && p.call(b) == g)
-                            return f;
-                        if (c(a)) {
-                            var b, d, m = "function" == typeof a.valueOf ? a.valueOf() : a;
-                            a = c(m) ? m + "" : m
-                        }
-                        if ("string" != typeof a)
-                            return 0 === a ? a : +a;
-                        a = a.replace(h, "");
-                        var n = j.test(a);
-                        return n || k.test(a) ? l(a.slice(2), n ? 2 : 8) : i.test(a) ? f : +a
-                    }
-                    var e = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(a) {
-                        return typeof a
-                    }
-                    : function(a) {
-                        return a && "function" == typeof Symbol && a.constructor === Symbol && a !== Symbol.prototype ? "symbol" : typeof a
-                    }
-                      , f = NaN
-                      , g = "[object Symbol]"
-                      , h = /^\s+|\s+$/g
-                      , i = /^[-+]0x[0-9a-f]+$/i
-                      , j = /^0b[01]+$/i
-                      , k = /^0o[0-7]+$/i
-                      , l = parseInt
-                      , m = "object" == (void 0 === b ? "undefined" : e(b)) && b && b.Object === Object && b
-                      , n = "object" == ("undefined" == typeof self ? "undefined" : e(self)) && self && self.Object === Object && self
-                      , o = m || n || Function("return this")()
-                      , p = Object.prototype.toString
-                      , q = Math.max
-                      , r = Math.min
-                      , s = function() {
-                        return o.Date.now()
-                    };
-                    a.exports = function(a, b, e) {
-                        function f(b) {
-                            var c = k
-                              , d = l;
-                            return k = l = void 0,
-                            t = b,
-                            n = a.apply(d, c)
-                        }
-                        function g(a) {
-                            var c = a - p
-                              , d = a - t;
-                            return void 0 === p || c >= b || c < 0 || v && d >= m
-                        }
-                        function h() {
-                            var a, c, d, e, f = s();
-                            return g(f) ? i(f) : void (o = setTimeout(h, (c = (a = f) - p,
-                            d = a - t,
-                            e = b - c,
-                            v ? r(e, m - d) : e)))
-                        }
-                        function i(a) {
-                            return o = void 0,
-                            w && k ? f(a) : (k = l = void 0,
-                            n)
-                        }
-                        function j() {
-                            var a, c = s(), d = g(c);
-                            if (k = arguments,
-                            l = this,
-                            p = c,
-                            d) {
-                                if (void 0 === o)
-                                    return t = a = p,
-                                    o = setTimeout(h, b),
-                                    u ? f(a) : n;
-                                if (v)
-                                    return o = setTimeout(h, b),
-                                    f(p)
-                            }
-                            return void 0 === o && (o = setTimeout(h, b)),
-                            n
-                        }
-                        var k, l, m, n, o, p, t = 0, u = !1, v = !1, w = !0;
-                        if ("function" != typeof a)
-                            throw TypeError("Expected a function");
-                        return b = d(b) || 0,
-                        c(e) && (u = !!e.leading,
-                        v = "maxWait"in e,
-                        m = v ? q(d(e.maxWait) || 0, b) : m,
-                        w = "trailing"in e ? !!e.trailing : w),
-                        j.cancel = function() {
-                            void 0 !== o && clearTimeout(o),
-                            t = 0,
-                            k = p = l = o = void 0
-                        }
-                        ,
-                        j.flush = function() {
-                            return void 0 === o ? n : i(s())
-                        }
-                        ,
-                        j
-                    }
-                }
-                ).call(b, function() {
-                    return this
-                }())
-            }
-            , function(a, b) {
-                "use strict";
-                function c(a) {
-                    var b = void 0
-                      , d = void 0;
-                    for (b = 0; b < a.length; b += 1)
-                        if ((d = a[b]).dataset && d.dataset.aos || d.children && c(d.children))
-                            return !0;
-                    return !1
-                }
-                function d() {
-                    return window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver
-                }
-                function e(a) {
-                    a && a.forEach(function(a) {
-                        var b = Array.prototype.slice.call(a.addedNodes)
-                          , d = Array.prototype.slice.call(a.removedNodes)
-                          , e = b.concat(d);
-                        if (c(e))
-                            return f()
-                    })
-                }
-                Object.defineProperty(b, "__esModule", {
-                    value: !0
-                });
-                var f = function() {};
-                b.default = {
-                    isSupported: function() {
-                        return !!d()
-                    },
-                    ready: function(a, b) {
-                        var c = window.document
-                          , g = new (d())(e);
-                        f = b,
-                        g.observe(c.documentElement, {
-                            childList: !0,
-                            subtree: !0,
-                            removedNodes: !0
-                        })
-                    }
-                }
-            }
-            , function(a, b) {
-                "use strict";
-                function c() {
-                    return navigator.userAgent || navigator.vendor || window.opera || ""
-                }
-                Object.defineProperty(b, "__esModule", {
-                    value: !0
-                });
-                var d = function() {
-                    function a(a, b) {
-                        for (var c = 0; c < b.length; c++) {
-                            var d = b[c];
-                            d.enumerable = d.enumerable || !1,
-                            d.configurable = !0,
-                            "value"in d && (d.writable = !0),
-                            Object.defineProperty(a, d.key, d)
-                        }
-                    }
-                    return function(b, c, d) {
-                        return c && a(b.prototype, c),
-                        d && a(b, d),
-                        b
-                    }
-                }()
-                  , e = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i
-                  , f = /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i
-                  , g = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i
-                  , h = /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i
-                  , i = function() {
-                    function a() {
-                        !function(a, b) {
-                            if (!(a instanceof b))
-                                throw TypeError("Cannot call a class as a function")
-                        }(this, a)
-                    }
-                    return d(a, [{
-                        key: "phone",
-                        value: function() {
-                            var a = c();
-                            return !(!e.test(a) && !f.test(a.substr(0, 4)))
-                        }
-                    }, {
-                        key: "mobile",
-                        value: function() {
-                            var a = c();
-                            return !(!g.test(a) && !h.test(a.substr(0, 4)))
-                        }
-                    }, {
-                        key: "tablet",
-                        value: function() {
-                            return this.mobile() && !this.phone()
-                        }
-                    }]),
-                    a
-                }();
-                b.default = new i
-            }
-            , function(a, b) {
-                "use strict";
-                Object.defineProperty(b, "__esModule", {
-                    value: !0
-                });
-                var c = function(a, b, c) {
-                    var d = a.node.getAttribute("data-aos-once");
-                    b > a.position ? a.node.classList.add("aos-animate") : void 0 === d || "false" !== d && (c || "true" === d) || a.node.classList.remove("aos-animate")
-                }
-                  , d = function(a, b) {
-                    var d = window.pageYOffset
-                      , e = window.innerHeight;
-                    a.forEach(function(a, f) {
-                        c(a, e + d, b)
-                    })
-                };
-                b.default = d
-            }
-            , function(a, b, c) {
-                "use strict";
-                Object.defineProperty(b, "__esModule", {
-                    value: !0
-                });
-                var d, e = (d = c(12)) && d.__esModule ? d : {
-                    default: d
-                }, f = function(a, b) {
-                    return a.forEach(function(a, c) {
-                        a.node.classList.add("aos-init"),
-                        a.position = (0,
-                        e.default)(a.node, b.offset)
-                    }),
-                    a
-                };
-                b.default = f
-            }
-            , function(a, b, c) {
-                "use strict";
-                Object.defineProperty(b, "__esModule", {
-                    value: !0
-                });
-                var d, e = (d = c(13)) && d.__esModule ? d : {
-                    default: d
-                }, f = function(a, b) {
-                    var c = 0
-                      , d = 0
-                      , f = window.innerHeight
-                      , g = {
-                        offset: a.getAttribute("data-aos-offset"),
-                        anchor: a.getAttribute("data-aos-anchor"),
-                        anchorPlacement: a.getAttribute("data-aos-anchor-placement")
-                    };
-                    switch (g.offset && !isNaN(g.offset) && (d = parseInt(g.offset)),
-                    g.anchor && document.querySelectorAll(g.anchor) && (a = document.querySelectorAll(g.anchor)[0]),
-                    c = (0,
-                    e.default)(a).top,
-                    g.anchorPlacement) {
-                    case "top-bottom":
-                        break;
-                    case "center-bottom":
-                        c += a.offsetHeight / 2;
-                        break;
-                    case "bottom-bottom":
-                        c += a.offsetHeight;
-                        break;
-                    case "top-center":
-                        c += f / 2;
-                        break;
-                    case "bottom-center":
-                        c += f / 2 + a.offsetHeight;
-                        break;
-                    case "center-center":
-                        c += f / 2 + a.offsetHeight / 2;
-                        break;
-                    case "top-top":
-                        c += f;
-                        break;
-                    case "bottom-top":
-                        c += a.offsetHeight + f;
-                        break;
-                    case "center-top":
-                        c += a.offsetHeight / 2 + f
-                    }
-                    return g.anchorPlacement || g.offset || isNaN(b) || (d = b),
-                    c + d
-                };
-                b.default = f
-            }
-            , function(a, b) {
-                "use strict";
-                Object.defineProperty(b, "__esModule", {
-                    value: !0
-                });
-                var c = function(a) {
-                    for (var b = 0, c = 0; a && !isNaN(a.offsetLeft) && !isNaN(a.offsetTop); )
-                        b += a.offsetLeft - ("BODY" != a.tagName ? a.scrollLeft : 0),
-                        c += a.offsetTop - ("BODY" != a.tagName ? a.scrollTop : 0),
-                        a = a.offsetParent;
-                    return {
-                        top: c,
-                        left: b
-                    }
-                };
-                b.default = c
-            }
-            , function(a, b) {
-                "use strict";
-                Object.defineProperty(b, "__esModule", {
-                    value: !0
-                });
-                var c = function(a) {
-                    return a = a || document.querySelectorAll("[data-aos]"),
-                    Array.prototype.map.call(a, function(a) {
-                        return {
-                            node: a
-                        }
-                    })
-                };
-                b.default = c
-            }
-            ])
-        })
-    },
-    1118: function(a, b, c) {
-        (window.__NEXT_P = window.__NEXT_P || []).push(["/_app", function() {
-            return c(8510)
+(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([[405], {
+    5557: function(a, b, c) {
+        (window.__NEXT_P = window.__NEXT_P || []).push(["/", function() {
+            return c(2417)
         }
         ])
     },
-    8510: function(a, b, c) {
+    2668: function(a, b, c) {
         "use strict";
-        c.r(b);
-        var d = c(1799)
-          , e = c(5893)
-          , f = c(7294)
-          , g = c(9008)
-          , h = c.n(g)
-          , i = c(2711)
-          , j = c.n(i);
-        c(6516),
-        c(8279),
-        c(4831),
-        c(1581),
-        c(9368),
-        c(7952),
-        c(3582),
-        c(710),
-        c(5372),
-        c(5652),
-        c(8502),
-        c(5886),
-        c(2881),
-        c(3613),
-        c(9972),
-        c(1516),
-        c(3471),
-        c(1764),
-        c(7899),
-        c(2317),
-        c(2872),
-        c(1557),
-        c(8963),
-        c(9064),
-        c(9902),
-        b.default = function(a) {
-            var b = a.Component
-              , g = a.pageProps;
+        var d = c(5893);
+        c(7294);
+        var e = function(a) {
+            var b = a.text
+              , c = a.textClassName
+              , e = a.lineClassName
+              , f = a.containerClassName;
             return (0,
-            f.useEffect)(function() {
-                c.e(332).then(c.t.bind(c, 5577, 23)),
-                Promise.resolve().then(c.t.bind(c, 2711, 23)),
-                j().init()
-            }, []),
-            (0,
-            e.jsxs)(e.Fragment, {
+            d.jsxs)("div", {
+                "data-aos": "zoom-in-right",
+                className: "mk-views-title-container ".concat(f || ""),
                 children: [(0,
-                e.jsxs)(h(), {
-                    children: [(0,
-                    e.jsx)("title", {
-                        children: "Muhammad Aamir Malik | Full Stack Developer"
-                    }), (0,
-                    e.jsx)("meta", {
-                        charSet: "utf-8"
-                    }), (0,
-                    e.jsx)("meta", {
-                        httpEquiv: "X-UA-Compatible",
-                        content: "IE=edge"
-                    }), (0,
-                    e.jsx)("meta", {
-                        name: "viewport",
-                        content: "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
-                    }), (0,
-                    e.jsx)("meta", {
-                        name: "description",
-                        content: "Muhammad Aamir Malik - Full Stack Developer specializing in React Native, Next.js, and modern web technologies"
-                    }), (0,
-                    e.jsx)("meta", {
-                        name: "keywords",
-                        content: "Full Stack Developer, React Native, Next.js, Mobile Development, Web Development"
-                    }), (0,
-                    e.jsx)("link", {
-                        rel: "manifest",
-                        href: "/manifest.json"
-                    }), (0,
-                    e.jsx)("link", {
-                        href: "../public/icons/16.png",
-                        rel: "icon",
-                        type: "image/png",
-                        sizes: "16x16"
-                    }), (0,
-                    e.jsx)("link", {
-                        href: "../public/icons/32.png",
-                        rel: "icon",
-                        type: "image/png",
-                        sizes: "32x32"
-                    }), (0,
-                    e.jsx)("link", {
-                        rel: "apple-touch-icon",
-                        href: "../public/icons/16.png"
-                    }), (0,
-                    e.jsx)("link", {
-                        rel: "apple-touch-icon",
-                        href: "../public/icons/32.png"
-                    })]
+                d.jsx)("div", {
+                    className: "mk-views-title-text ".concat(c || ""),
+                    children: void 0 === b ? "" : b
                 }), (0,
-                e.jsx)(b, (0,
-                d.Z)({}, g))]
+                d.jsx)("div", {
+                    className: "mk-views-title-line-container",
+                    children: (0,
+                    d.jsx)("div", {
+                        className: "mk-views-title-line ".concat(e || "")
+                    })
+                })]
             })
-        }
+        };
+        e.propTypes = {},
+        b.Z = e
     },
-    8279: function() {},
-    6516: function() {},
-    9064: function() {},
-    1557: function() {},
-    1764: function() {},
-    7899: function() {},
-    4831: function() {},
-    7952: function() {},
-    5652: function() {},
-    1581: function() {},
-    3613: function() {},
-    5886: function() {},
-    2317: function() {},
-    5372: function() {},
-    9368: function() {},
-    2872: function() {},
-    8963: function() {},
-    9902: function() {},
-    8502: function() {},
-    1516: function() {},
-    710: function() {},
-    3471: function() {},
-    2881: function() {},
-    9972: function() {},
-    3582: function() {},
-    9008: function(a, b, c) {
-        a.exports = c(5443)
-    },
-    1799: function(a, b, c) {
+    2417: function(a, b, c) {
         "use strict";
-        function d(a, b, c) {
-            return b in a ? Object.defineProperty(a, b, {
-                value: c,
-                enumerable: !0,
-                configurable: !0,
-                writable: !0
-            }) : a[b] = c,
-            a
-        }
-        function e(a) {
-            for (var b = 1; b < arguments.length; b++) {
-                var c = null != arguments[b] ? arguments[b] : {}
-                  , e = Object.keys(c);
-                "function" == typeof Object.getOwnPropertySymbols && (e = e.concat(Object.getOwnPropertySymbols(c).filter(function(a) {
-                    return Object.getOwnPropertyDescriptor(c, a).enumerable
-                }))),
-                e.forEach(function(b) {
-                    d(a, b, c[b])
-                })
-            }
-            return a
-        }
+        c.r(b),
         c.d(b, {
-            Z: function() {
+            default: function() {
+                return as
+            }
+        });
+        var d = c(5893)
+          , e = c(2141)
+          , f = c(7294)
+          , g = c(1799)
+          , h = c(9396);
+        (function(a) {
+            return (0,
+            d.jsxs)("svg", (0,
+            h.Z)((0,
+            g.Z)({}, a), {
+                viewBox: "0 0 24 24",
+                fill: "none",
+                stroke: "currentColor",
+                strokeWidth: "2",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                className: "feather feather-star",
+                children: [(0,
+                d.jsx)("title", {
+                    children: "Star"
+                }), (0,
+                d.jsx)("polygon", {
+                    points: "12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                })]
+            }))
+        }
+        ).propTypes = {},
+        (function(a) {
+            return (0,
+            d.jsxs)("svg", (0,
+            h.Z)((0,
+            g.Z)({}, a), {
+                viewBox: "0 0 24 24",
+                fill: "none",
+                stroke: "currentColor",
+                strokeWidth: "2",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                className: "feather feather-git-branch",
+                children: [(0,
+                d.jsx)("title", {
+                    children: "Git GitFork"
+                }), (0,
+                d.jsx)("line", {
+                    x1: "6",
+                    y1: "3",
+                    x2: "6",
+                    y2: "15"
+                }), (0,
+                d.jsx)("circle", {
+                    cx: "18",
+                    cy: "6",
+                    r: "3"
+                }), (0,
+                d.jsx)("circle", {
+                    cx: "6",
+                    cy: "18",
+                    r: "3"
+                }), (0,
+                d.jsx)("path", {
+                    d: "M18 9a9 9 0 0 1-9 9"
+                })]
+            }))
+        }
+        ).propTypes = {};
+        var i = function(a) {
+            var b = a.data
+              , c = b.label
+              , g = b.heading
+              , h = b.description
+              , i = b.button
+              , j = b.handleBuiltByClick;
+            b.designAndBuiltBy;
+            var k = (0,
+            f.useState)({
+                stars: null,
+                forks: null
+            })
+              , l = (k[0],
+            k[1]);
+            (0,
+            f.useEffect)(function() {
+                fetch("https://api.github.com/repos/Muneebwasikhan/portfolio").then(function(a) {
+                    return a.json()
+                }).then(function(a) {
+                    var b = a.stargazers_count
+                      , c = a.forks_count;
+                    l({
+                        stars: b,
+                        forks: c
+                    })
+                }).catch(function(a) {
+                    return console.error(a)
+                })
+            }, []);
+            var m = (0,
+            e.YT)({
+                easing: "easeIn",
+                translateX: [-50, 0]
+            }).ref;
+            return (0,
+            d.jsxs)("div", {
+                className: "mk-contact",
+                children: [(0,
+                d.jsx)("div", {
+                    ref: m,
+                    className: "mk-contact-zebra-img",
+                    style: {
+                        backgroundImage: "url(/assets/arrow-sample.svg)"
+                    }
+                }), (0,
+                d.jsx)("div", {
+                    className: "mk-contact-box",
+                    children: (0,
+                    d.jsx)("div", {
+                        className: "container flex-center flex-column",
+                        children: (0,
+                        d.jsxs)("div", {
+                            className: "mk-contact-box-width",
+                            children: [(0,
+                            d.jsx)("div", {
+                                className: "mk-contact-label",
+                                children: c
+                            }), (0,
+                            d.jsxs)("div", {
+                                className: "mk-contact-title",
+                                children: [g, " "]
+                            }), (0,
+                            d.jsx)("div", {
+                                className: "mk-contact-text",
+                                children: h
+                            }), (0,
+                            d.jsx)("div", {
+                                className: "mk-contact-button",
+                                children: (0,
+                                d.jsx)("button", {
+                                    onClick: null == i ? void 0 : i.onClick,
+                                    className: "mk-button",
+                                    children: null == i ? void 0 : i.label
+                                })
+                            }), (0,
+                            d.jsx)("div", {
+                                onClick: j,
+                                className: "mk-contact-git-section"
+                            })]
+                        })
+                    })
+                })]
+            })
+        };
+        i.propTypes = {};
+        var j = i
+          , k = [{
+            layer1: "#F8F6F6",
+            layer2: "#F5D061",
+            layer3: "#2A363B",
+            layer4: "#CF4647"
+        }, {
+            layer1: "#222831",
+            layer2: "#393E46",
+            layer3: "#00ADB5",
+            layer4: "#EEEEEE"
+        }, {
+            layer1: "#222831",
+            layer2: "#393E46",
+            layer3: "#EEEEEE",
+            layer4: "#00ADB5"
+        }, {
+            layer1: "#222831",
+            layer2: "#393E46",
+            layer3: "#00ADB5",
+            layer4: "#EEEEEE"
+        }, {
+            layer1: "#222831",
+            layer2: "#393E46",
+            layer3: "#FFD369",
+            layer4: "#EEEEEE"
+        }, {
+            layer1: "#222831",
+            layer2: "#EEEEEE",
+            layer3: "#00ADB5",
+            layer4: "#393E46"
+        }, {
+            layer1: "#222831",
+            layer2: "#393E46",
+            layer3: "#00ADB5",
+            layer4: "#EEEEEE"
+        }, {
+            layer1: "#F8F8F8",
+            layer2: "#434343",
+            layer3: "#FAEBCD",
+            layer4: "#F7C873"
+        }, {
+            layer1: "#F8F6F6",
+            layer2: "#F5D061",
+            layer3: "#2A363B",
+            layer4: "#CF4647"
+        }, ]
+          , l = function() {
+            return k
+        }
+          , m = function() {
+            (0,
+            f.useEffect)(function() {
+                var a = document.getElementsByClassName("view-element")
+                  , b = window.location.pathname.startsWith("/projects");
+                if (a && a.length > 0 && !b)
+                    return window.addEventListener("scroll", c),
+                    c(),
+                    function() {
+                        window.removeEventListener("scroll", c)
+                    }
+            }, []);
+            var a = function(a) {
+                var b = document.documentElement;
+                b.style.setProperty("--themeColor1", a.layer1),
+                b.style.setProperty("--themeColor2", a.layer2),
+                b.style.setProperty("--themeColor3", a.layer3),
+                b.style.setProperty("--themeColor4", a.layer4);
+                var c = document.querySelector('meta[name="theme-color"]');
+                (null == c ? void 0 : c.setAttribute) && (null == c ? void 0 : c.content) !== a.layer2 && c.setAttribute("content", a.layer2)
+            }
+              , b = function() {
+                var a = window.innerHeight
+                  , b = window.pageYOffset
+                  , c = b + a / 2
+                  , d = document.getElementsByClassName("view-element")
+                  , e = 0;
+                if (!d || 0 === d.length || !d[0] || c < d[0].scrollHeight)
+                    return e;
+                for (var f = 0; f < d.length; f++) {
+                    var g = d[f]
+                      , h = d[f + 1];
+                    if (!h || c > g.offsetTop && c < (null == h ? void 0 : h.offsetTop)) {
+                        e = f;
+                        break
+                    }
+                }
                 return e
             }
-        })
+              , c = function() {
+                try {
+                    var c = b()
+                      , d = l();
+                    a(d[c] || d[0])
+                } catch (e) {
+                    console.warn("FullPageScroll error:", e);
+                    var f = l();
+                    a(f[0])
+                }
+            };
+            return (0,
+            d.jsx)("div", {})
+        }
+          , n = c(9988)
+          , o = c(2668)
+          , p = function(a) {
+            var b = a.data
+              , c = b.heading
+              , e = b.data;
+            return (0,
+            d.jsx)("div", {
+                className: "mk-maps",
+                children: (0,
+                d.jsx)("div", {
+                    className: "container h100per-min100vh d-flex",
+                    children: (0,
+                    d.jsxs)("div", {
+                        className: "mk-maps-container",
+                        children: [(0,
+                        d.jsx)(o.Z, {
+                            text: c
+                        }), e.map(function(a, b) {
+                            return (0,
+                            d.jsx)("div", {
+                                "data-aos": "fade-down-right",
+                                children: (0,
+                                d.jsxs)("div", {
+                                    className: "mk-box",
+                                    children: [(0,
+                                    d.jsxs)("div", {
+                                        className: "row",
+                                        children: [(0,
+                                        d.jsx)("div", {
+                                            "data-aos": "zoom-in-left",
+                                            className: "col-3 d-flex flex-column justify-content-center px-sm-3 p-0",
+                                            children: (0,
+                                            d.jsx)("img", {
+                                                src: a.logo,
+                                                className: "mk-gsv-logo"
+                                            })
+                                        }), (0,
+                                        d.jsxs)("div", {
+                                            className: "col-9 d-flex flex-column justify-content-center mt-2 mb-2",
+                                            children: [(0,
+                                            d.jsx)("div", {
+                                                "data-aos": "zoom-in-right",
+                                                className: "mk-box-heading",
+                                                children: a.title
+                                            }), (0,
+                                            d.jsx)("div", {
+                                                "data-aos": "zoom-in-left",
+                                                className: "mk-box-subheading",
+                                                children: a.description
+                                            })]
+                                        })]
+                                    }), (0,
+                                    d.jsx)("div", {
+                                        "data-aos": "zoom-in-right",
+                                        className: "mk-box-para",
+                                        children: a.paragraph
+                                    }), (0,
+                                    d.jsx)("div", {
+                                        "data-aos": "zoom-in-left",
+                                        className: "mk-box-iframe-wrapper mk-assets-hover-filter",
+                                        children: (0,
+                                        d.jsx)("iframe", {
+                                            width: "560",
+                                            height: "315",
+                                            className: "mk-box-iframe",
+                                            src: a.iframe,
+                                            title: a.iframeTitle,
+                                            frameBorder: "0",
+                                            allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+                                            allowFullScreen: !0
+                                        })
+                                    })]
+                                })
+                            }, b)
+                        })]
+                    })
+                })
+            })
+        };
+        p.propTypes = {};
+        var q = p
+          , r = c(1530)
+          , s = function(a) {
+            return (0,
+            d.jsxs)("svg", (0,
+            h.Z)((0,
+            g.Z)({}, a), {
+                xmlns: "http://www.w3.org/2000/svg",
+                id: "Layer_1",
+                "data-name": "Layer 1",
+                viewBox: "0 0 68 66",
+                children: [(0,
+                d.jsx)("defs", {}), (0,
+                d.jsx)("title", {
+                    children: "kubernetes_icons"
+                }), (0,
+                d.jsx)("path", {
+                    className: "cls-1",
+                    d: "M62.94206,39.30176c-.14868-.03428-.361-.09292-.50677-.11977a14.71841,14.71841,0,0,0-1.67107-.13464,16.2992,16.2992,0,0,1-3.12656-.513,1.9597,1.9597,0,0,1-.75169-.75665l-.70378-.20486A22.64869,22.64869,0,0,0,52.55176,21.8852c.18008-.16356.52123-.46547.61746-.55427a1.3787,1.3787,0,0,1,.32711-.98712,16.31266,16.31266,0,0,1,2.59252-1.82141,14.49625,14.49625,0,0,0,1.44845-.845c.11234-.08343.266-.2156.3837-.30977a1.752,1.752,0,1,0-2.17083-2.72592c-.11894.09376-.28085.21684-.38658.30853a14.45744,14.45744,0,0,0-1.15191,1.2184,16.32712,16.32712,0,0,1-2.35008,2.12622,1.937,1.937,0,0,1-1.05732.11482l-.66331.47373a22.84364,22.84364,0,0,0-14.46885-6.99116c-.01611-.2317-.03594-.65133-.04213-.77812a1.38116,1.38116,0,0,1-.56873-.87147,16.32741,16.32741,0,0,1,.19743-3.16207,14.50184,14.50184,0,0,0,.23748-1.657c.00537-.14043-.00289-.34446-.00289-.496a1.752,1.752,0,1,0-3.48629.00165c0,.01652.00372.03221.00413.04873-.00165.14456-.00867.31968-.00413.44607a14.652,14.652,0,0,0,.2379,1.65826,16.30436,16.30436,0,0,1,.19412,3.16124,1.90033,1.90033,0,0,1-.56584.90121l-.0413.73765a22.73722,22.73722,0,0,0-3.15133.48447A22.42237,22.42237,0,0,0,17.292,18.87347q-.318-.21931-.63027-.44689a1.37655,1.37655,0,0,1-1.035-.10036,16.2653,16.2653,0,0,1-2.35008-2.12332,14.55977,14.55977,0,0,0-1.147-1.21841c-.10614-.09086-.26846-.21476-.38741-.30976a2.07752,2.07752,0,0,0-1.2151-.45845,1.67933,1.67933,0,0,0-1.389.6154,1.84744,1.84744,0,0,0,.42871,2.5698l.02685.019c.114.09334.25442.21271.36015.28994a14.56165,14.56165,0,0,0,1.44515.84586,16.25954,16.25954,0,0,1,2.5921,1.82224,1.937,1.937,0,0,1,.35066,1.00529l.558.49892a22.5562,22.5562,0,0,0-3.5565,15.72485l-.7298.21229a2.41,2.41,0,0,1-.74921.75458,16.26839,16.26839,0,0,1-3.12449.515,14.56589,14.56589,0,0,0-1.67231.13464c-.13382.02478-.31967.07187-.46547.10821l-.01528.00331-.02478.00743a1.74955,1.74955,0,1,0,.77441,3.39667l.026-.00413c.01156-.00248.02147-.00826.033-.01032.14373-.03305.32463-.06732.451-.10161a14.69936,14.69936,0,0,0,1.56368-.59929,16.32534,16.32534,0,0,1,3.039-.89418,1.933,1.933,0,0,1,1.002.354l.76-.1301A22.68377,22.68377,0,0,0,22.26389,53.90444l-.31761.76a1.72965,1.72965,0,0,1,.15571.98587,17.02778,17.02778,0,0,1-1.57773,2.83495,14.53108,14.53108,0,0,0-.93466,1.3927c-.06939.13134-.15736.33248-.22386.47a1.75037,1.75037,0,1,0,3.14762,1.49348l.00289-.00331V61.834c.06608-.1363.15984-.31514.2156-.44276a14.4168,14.4168,0,0,0,.503-1.59755,12.191,12.191,0,0,1,1.34975-3.13151,1.4167,1.4167,0,0,1,.75128-.36676l.39525-.71452a22.55783,22.55783,0,0,0,16.08541.04089c.11069.19742.3172.57492.37171.67033a1.37739,1.37739,0,0,1,.89006.54105,16.23426,16.23426,0,0,1,1.19692,2.93078,14.5697,14.5697,0,0,0,.50595,1.59755c.05658.12886.14869.30976.2156.44688a1.75119,1.75119,0,1,0,3.15133-1.48975c-.0665-.13753-.15819-.33868-.22716-.46919A14.48039,14.48039,0,0,0,46.98634,58.46a16.26143,16.26143,0,0,1-1.54552-2.76722,1.36873,1.36873,0,0,1,.13382-1.02842,5.99541,5.99541,0,0,1-.29035-.70337A22.683,22.683,0,0,0,55.3322,41.3206c.22551.03593.61828.10449.74591.13051a1.37823,1.37823,0,0,1,.97472-.36222,16.30543,16.30543,0,0,1,3.03981.89418,14.511,14.511,0,0,0,1.56452.60384c.126.033.30563.06443.45018.09623.012.00331.02272.00826.03428.01157l.02478.00372a1.74955,1.74955,0,1,0,.77565-3.39667ZM46.38,21.54735l-7.44961,5.28126-.026-.01239a1.53767,1.53767,0,0,1-2.44218-1.17214L36.454,25.64,35.93645,16.511a18.11083,18.11083,0,0,1,10.44317,5.03634ZM32.3465,31.554h2.80357L36.893,33.733l-.6249,2.71766-2.51776,1.21179-2.52519-1.21427-.62614-2.7189ZM29.709,16.83068a18.45074,18.45074,0,0,1,1.85982-.31967l-.51833,9.143-.038.01817A1.53643,1.53643,0,0,1,28.574,26.85009l-.01446.00826L21.0616,21.542A17.95264,17.95264,0,0,1,29.709,16.83068ZM18.3427,24.95888l6.84536,6.12258-.00743.03717a1.53642,1.53642,0,0,1-.60383,2.64125l-.007.02974-8.77458,2.5318a17.9473,17.9473,0,0,1,2.5475-11.36213ZM27.508,41.22354,24.0217,49.64787A18.04728,18.04728,0,0,1,16.779,40.58295l8.99677-1.52817.01529.02024a1.5097,1.5097,0,0,1,.3015-.02685A1.53642,1.53642,0,0,1,27.482,41.18968ZM37.79875,52.057a18.02283,18.02283,0,0,1-9.836-.50512l4.42466-8.001h.00744a1.53849,1.53849,0,0,1,2.70816-.00247h.033l4.43582,8.0142q-.86362.28828-1.77309.49521Zm5.71659-2.37527-3.52222-8.51024.01073-.01528a1.5385,1.5385,0,0,1,.74467-1.992,1.522,1.522,0,0,1,.58856-.15282,1.48213,1.48213,0,0,1,.35312.026l.01529-.019,9.0769,1.53395a17.97868,17.97868,0,0,1-7.267,9.12977Zm8.2203-13.39005-8.81877-2.54006-.00826-.03717a1.53849,1.53849,0,0,1-.603-2.64125l-.0033-.01776L49.10966,24.963A18.288,18.288,0,0,1,51.73521,36.2921Z"
+                })]
+            }))
+        };
+        s.propTypes = {};
+        var t = s
+          , u = function(a) {
+            var b = a.text;
+            return (0,
+            d.jsx)("div", {
+                "data-aos": "zoom-in-left",
+                className: "mk-myself-paragraph",
+                children: b
+            })
+        }
+          , v = function(a) {
+            var b = a.items;
+            return (0,
+            d.jsx)("div", {
+                className: "col",
+                children: (b || []).map(function(a) {
+                    return (0,
+                    d.jsx)("div", {
+                        "data-aos": "zoom-in-left",
+                        className: "mk-myself-skill",
+                        children: a
+                    }, a)
+                })
+            })
+        }
+          , w = function(a) {
+            var b = a.list1
+              , c = a.list2;
+            return (0,
+            d.jsxs)("div", {
+                className: "mk-myself-list-parent row",
+                children: [(0,
+                d.jsx)(v, {
+                    items: b
+                }), (0,
+                d.jsx)(v, {
+                    items: c
+                })]
+            })
+        }
+          , x = function(a) {
+            var b = a.data
+              , c = b.heading
+              , f = b.paragraphs
+              , g = b.techList1
+              , h = b.techList2
+              , i = b.image
+              , j = (0,
+            e.YT)({
+                speed: -20,
+                easing: [1, 1.5, .5, 2],
+                rotate: [0, 360]
+            }).ref;
+            return (0,
+            d.jsxs)("div", {
+                className: "mk-myself",
+                children: [(0,
+                d.jsx)("div", {
+                    ref: j,
+                    className: "mk-myself-settings-icon",
+                    children: (0,
+                    d.jsx)(t, {})
+                }), (0,
+                d.jsx)("div", {
+                    className: "container",
+                    children: (0,
+                    d.jsxs)("div", {
+                        "data-aos": "fade-down-left",
+                        className: "mk-myself-container",
+                        children: [(0,
+                        d.jsx)(o.Z, {
+                            text: c
+                        }), (0,
+                        d.jsxs)("div", {
+                            className: "row justify-content-center",
+                            children: [(0,
+                            d.jsx)("div", {
+                                className: "col-12 col-md-8",
+                                children: (0,
+                                d.jsxs)("div", {
+                                    className: "",
+                                    children: [(f || []).map(function(a, b) {
+                                        return (0,
+                                        d.jsx)(u, {
+                                            text: a
+                                        }, b)
+                                    }), (0,
+                                    d.jsx)(w, {
+                                        list1: g,
+                                        list2: h
+                                    })]
+                                })
+                            }), (0,
+                            d.jsx)("div", {
+                                className: "col-12 col-md-4 mt-5 mt-md-0",
+                                children: (0,
+                                d.jsx)("div", {
+                                    "data-aos": "zoom-in-right",
+                                    className: "mk-myself-profile-wrapper d-flex justify-content-center",
+                                    children: (0,
+                                    d.jsx)(r.Z, {
+                                        showFilter: !0,
+                                        showBorder: !0,
+                                        imageClassName: "mk-myself-profile",
+                                        parentClassName: "mk-myself-profile-parent",
+                                        src: i
+                                    })
+                                })
+                            })]
+                        })]
+                    })
+                })]
+            })
+        };
+        x.propTypes = {};
+        var y = x
+          , z = c(603)
+          , A = c(5148)
+          , B = {
+            tension: 1200,
+            friction: 40
+        }
+          , C = {
+            mass: 10,
+            tension: 200,
+            friction: 50
+        }
+          , D = function(a, b) {
+            return "translate3d(".concat(a, "px,").concat(b, "px,0) translate3d(-50%,-50%,0)")
+        };
+        function E() {
+            var a = (0,
+            z.Z)((0,
+            A.q_)({
+                pos1: [0, 0],
+                config: B
+            }), 2)
+              , b = a[0].pos1
+              , c = a[1]
+              , e = (0,
+            z.Z)((0,
+            A.q_)({
+                pos2: b,
+                config: C
+            }), 1)[0].pos2
+              , g = (0,
+            z.Z)((0,
+            A.q_)({
+                pos3: e,
+                config: C
+            }), 1)[0].pos3;
+            return (0,
+            f.useEffect)(function() {
+                var a = function(a) {
+                    var b = a.clientX
+                      , d = a.clientY;
+                    c({
+                        pos1: [b, d]
+                    })
+                };
+                return window.addEventListener("mousemove", a),
+                function() {
+                    return window.removeEventListener("mousemove", a)
+                }
+            }, []),
+            (0,
+            d.jsxs)("div", {
+                className: "mk-gooery",
+                children: [(0,
+                d.jsx)("svg", {
+                    style: {
+                        position: "absolute",
+                        width: 0,
+                        height: 0
+                    },
+                    children: (0,
+                    d.jsxs)("filter", {
+                        id: "goo",
+                        children: [(0,
+                        d.jsx)("feGaussianBlur", {
+                            in: "SourceGraphic",
+                            result: "blur",
+                            stdDeviation: "30"
+                        }), (0,
+                        d.jsx)("feColorMatrix", {
+                            in: "blur",
+                            values: "1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 30 -7"
+                        })]
+                    })
+                }), (0,
+                d.jsx)("div", {
+                    className: "hooks-main",
+                    children: (0,
+                    d.jsxs)("div", {
+                        className: "hooks-filter",
+                        children: [(0,
+                        d.jsx)(A.q.div, {
+                            className: "b1",
+                            style: {
+                                transform: g.interpolate(D)
+                            }
+                        }), (0,
+                        d.jsx)(A.q.div, {
+                            className: "b2",
+                            style: {
+                                transform: e.interpolate(D)
+                            }
+                        }), (0,
+                        d.jsx)(A.q.div, {
+                            className: "b3",
+                            style: {
+                                transform: b.interpolate(D)
+                            }
+                        })]
+                    })
+                })]
+            })
+        }
+        var F = c(1754)
+          , G = function(a) {
+            var b = a.values
+              , c = void 0 === b ? ["Empty"] : b
+              , e = a.delay
+              , g = void 0 === e ? 5e3 : e
+              , h = (0,
+            F.q)()
+              , i = h.result
+              , j = h.dencrypt;
+            return (0,
+            f.useEffect)(function() {
+                var a = 1
+                  , b = setInterval(function() {
+                    j(c[a]),
+                    a = a === c.length - 1 ? 0 : a + 1
+                }, g);
+                return function() {
+                    return clearInterval(b)
+                }
+            }, []),
+            (0,
+            d.jsx)(d.Fragment, {
+                children: i || c[0]
+            })
+        };
+        G.propTypes = {};
+        var H = G
+          , I = function(a) {
+            var b = a.data
+              , c = b.title1
+              , e = b.title2
+              , f = b.decrypTexts
+              , g = b.description
+              , h = b.button;
+            return (0,
+            d.jsx)("div", {
+                className: "mk-outer",
+                children: (0,
+                d.jsx)("div", {
+                    className: "container",
+                    children: (0,
+                    d.jsxs)("div", {
+                        className: "mk-outer-container d-flex justify-content-between align-items-center",
+                        children: [(0,
+                        d.jsxs)("div", {
+                            className: "mk-outer-text",
+                            children: [(0,
+                            d.jsx)("div", {
+                                className: "mk-outer-heading",
+                                children: c
+                            }), (0,
+                            d.jsx)("div", {
+                                className: "mk-outer-heading",
+                                children: e
+                            }), (0,
+                            d.jsx)("div", {
+                                className: "mk-outer-heading2",
+                                children: (0,
+                                d.jsx)(H, {
+                                    values: f
+                                })
+                            }), (0,
+                            d.jsx)("div", {
+                                className: "mk-outer-description",
+                                children: g
+                            }), (0,
+                            d.jsx)("div", {
+                                className: "mk-outer-contact",
+                                children: (0,
+                                d.jsx)("button", {
+                                    onClick: null == h ? void 0 : h.onClick,
+                                    className: "mk-button",
+                                    children: null == h ? void 0 : h.label
+                                })
+                            })]
+                        }), (0,
+                        d.jsx)("div", {
+                            className: "mk-outer-gooery",
+                            children: (0,
+                            d.jsx)(E, {})
+                        })]
+                    })
+                })
+            })
+        };
+        I.propTypes = {};
+        var J = I
+          , K = c(1664)
+          , L = c.n(K)
+          , M = c(5716)
+          , N = function(a) {
+            var b = a.src;
+            return (0,
+            d.jsx)(r.Z, {
+                showFilter: !0,
+                imageClassName: "mk-image",
+                src: b
+            })
+        }
+          , O = function(a) {
+            return a % 2 ? "left" : "right"
+        }
+          , P = function(a) {
+            var b = a.image
+              , c = a.index
+              , e = O(c);
+            return (0,
+            d.jsx)("div", {
+                className: "mk-projects-single",
+                children: (0,
+                d.jsxs)("div", {
+                    className: "row",
+                    children: [(0,
+                    d.jsx)("div", {
+                        className: "col-6 d-none d-lg-block",
+                        children: (0,
+                        d.jsx)("div", {
+                            className: "",
+                            children: (0,
+                            d.jsx)(M.Z, {
+                                containerClassName: "mk-projects-image-container mk-projects-image-container-".concat(e),
+                                children: (0,
+                                d.jsx)(N, {
+                                    src: b
+                                })
+                            })
+                        })
+                    }), (0,
+                    d.jsx)("div", {
+                        className: "col-12 col-lg-6 d-flex align-items-center ".concat("right" === e ? "order-first" : ""),
+                        children: (0,
+                        d.jsx)(Q, (0,
+                        g.Z)({}, a))
+                    })]
+                })
+            })
+        }
+          , Q = function(a) {
+            var b = a.label
+              , c = a.title
+              , e = a.description
+              , f = a.techs
+              , g = a.index
+              , h = a.image
+              , i = a.slug
+              , j = O(g);
+            return (0,
+            d.jsxs)("div", {
+                "data-aos": "fade-down-".concat(j),
+                className: "mk-projects-text-side mk-projects-text-side-".concat(j),
+                children: [(0,
+                d.jsx)("div", {
+                    "data-aos": "zoom-in-".concat(j),
+                    className: "mk-projects-text-featured",
+                    children: b
+                }), (0,
+                d.jsx)("div", {
+                    "data-aos": "zoom-in-".concat(j),
+                    className: "mk-projects-text-title",
+                    children: c
+                }), (0,
+                d.jsxs)("div", {
+                    "data-aos": "zoom-in-".concat(j),
+                    className: "mk-projects-text-description text-left",
+                    children: [e, (0,
+                    d.jsx)("div", {
+                        className: "mt-4 d-block d-lg-none",
+                        children: (0,
+                        d.jsx)(M.Z, {
+                            containerClassName: "mk-text-image-container",
+                            children: (0,
+                            d.jsx)(N, {
+                                src: h
+                            })
+                        })
+                    })]
+                }), (0,
+                d.jsx)("div", {
+                    "data-aos": "zoom-in-".concat(j),
+                    className: "mk-projects-text-tecs",
+                    children: f.map(function(a, b) {
+                        return "".concat(a, " ").concat(f.length - 1 !== b ? " | " : "")
+                    })
+                }), (0,
+                d.jsx)("div", {
+                    "data-aos": "zoom-in-".concat(j),
+                    className: "mk-projects-text-actions",
+                    children: (0,
+                    d.jsx)(L(), {
+                        href: "/projects/".concat(i),
+                        children: (0,
+                        d.jsx)("a", {
+                            className: "mk-button-md mk-projects-view-details-btn",
+                            children: "View Details"
+                        })
+                    })
+                })]
+            })
+        }
+          , R = function(a) {
+            var b = a.data
+              , c = b.heading
+              , e = b.list;
+            return (0,
+            d.jsx)("div", {
+                className: "mk-projects",
+                children: (0,
+                d.jsx)("div", {
+                    className: "container",
+                    children: (0,
+                    d.jsxs)("div", {
+                        className: "mk-projects-container",
+                        children: [(0,
+                        d.jsx)(o.Z, {
+                            text: c
+                        }), (0,
+                        d.jsx)("div", {
+                            className: "row justify-content-center",
+                            children: (e || []).map(function(a, b) {
+                                return (0,
+                                d.jsx)(P, (0,
+                                g.Z)({
+                                    index: b
+                                }, a), b)
+                            })
+                        }), (0,
+                        d.jsx)("div", {
+                            className: "mk-projects-view-all",
+                            "data-aos": "fade-up",
+                            "data-aos-delay": "200",
+                            "data-aos-duration": "800",
+                            "data-aos-easing": "ease-out",
+                            children: (0,
+                            d.jsx)(L(), {
+                                href: "/projects",
+                                children: (0,
+                                d.jsx)("a", {
+                                    className: "mk-button-md mk-projects-view-all-btn",
+                                    children: "View All Projects"
+                                })
+                            })
+                        })]
+                    })
+                })
+            })
+        };
+        R.propTypes = {};
+        var S = R
+          , T = function(a) {
+            var b, c = a.index % 2;
+            return {
+                translateX: ({
+                    0: ["-0%", "".concat(110, "%")],
+                    1: ["0%", "-".concat(110, "%")]
+                })[c],
+                scale: ({})[c],
+                alignSelf: ({
+                    0: "self-end",
+                    1: "self-start"
+                })[c],
+                rotate: ({
+                    0: [0, 4],
+                    1: [0, -4]
+                })[c],
+                theme: ({
+                    0: "theme1",
+                    1: "theme2"
+                })[c]
+            }
+        }
+          , U = function(a) {
+            var b = a.text
+              , c = a.index
+              , i = a.client
+              , j = a.via
+              , k = (0,
+            f.useRef)()
+              , l = (0,
+            f.useState)(0)
+              , m = l[0]
+              , n = l[1]
+              , o = (0,
+            f.useState)(0)
+              , p = o[0]
+              , q = o[1];
+            (0,
+            f.useEffect)(function() {
+                window.addEventListener("resize", r),
+                setTimeout(function() {
+                    r()
+                }, 3e3)
+            }, []);
+            var r = function() {
+                var a = window.innerHeight
+                  , b = (null == k ? void 0 : k.current).getBoundingClientRect().top + window.scrollY + 150;
+                n(b - a),
+                q(b + a)
+            }
+              , s = T({
+                text: b,
+                index: c
+            })
+              , t = s.scale
+              , u = s.translateX
+              , v = s.alignSelf
+              , w = s.rotate
+              , x = s.theme;
+            return (0,
+            d.jsxs)(e.VS, (0,
+            h.Z)((0,
+            g.Z)({
+                translateX: u,
+                scale: t,
+                rotate: w,
+                easing: "easeOutBack"
+            }, m && {
+                startScroll: m
+            }, p && {
+                endScroll: p
+            }), {
+                style: {
+                    width: "fit-content",
+                    alignSelf: v,
+                    transition: "all 1000ms cubic-bezier(0.18, 0.89, 0.32, 1.28)"
+                },
+                children: [(0,
+                d.jsxs)("div", {
+                    ref: k,
+                    className: "mk-review-item-info mk-reviwe-color-".concat(x, "-invert"),
+                    children: [i, " via ", j]
+                }), (0,
+                d.jsx)("div", {
+                    className: "mk-review-item mk-reviwe-color-".concat(x),
+                    children: '"'.concat(b, '"')
+                })]
+            }))
+        }
+          , V = function(a) {
+            var b = a.data
+              , c = b.heading
+              , e = b.list;
+            return (0,
+            d.jsxs)("div", {
+                className: "mk-reviews",
+                children: [(0,
+                d.jsx)("div", {
+                    className: "container",
+                    children: (0,
+                    d.jsx)("div", {
+                        className: "mk-reviews-container",
+                        children: (0,
+                        d.jsx)(o.Z, {
+                            text: c
+                        })
+                    })
+                }), (0,
+                d.jsx)("div", {
+                    className: "mk-reviews-list",
+                    children: (e || []).map(function(a, b) {
+                        return (0,
+                        d.jsx)(U, {
+                            index: b,
+                            text: a.review,
+                            client: a.client,
+                            via: a.via
+                        }, b)
+                    })
+                })]
+            })
+        };
+        V.propTypes = {};
+        var W = V
+          , X = c(7247)
+          , Y = c(4816)
+          , Z = function(a) {
+            var b = a.text;
+            return (0,
+            d.jsx)("div", {
+                className: "mk-works-tab-right-list-item",
+                children: b
+            })
+        }
+          , $ = function(a) {
+            var b = a.list
+              , c = (0,
+            f.useState)(0)
+              , e = c[0]
+              , g = c[1]
+              , h = b[e];
+            return (0,
+            d.jsx)("div", {
+                children: (0,
+                d.jsxs)("div", {
+                    className: "mk-works-tab",
+                    children: [(0,
+                    d.jsx)("div", {
+                        className: "mk-works-left-border",
+                        children: (0,
+                        d.jsx)("div", {
+                            style: {
+                                transform: "translateY(".concat(42 * e, "px)")
+                            },
+                            className: "mk-works-left-border-selection"
+                        })
+                    }), (0,
+                    d.jsx)("div", {
+                        className: "mk-works-tab-left",
+                        children: (b || []).map(function(a, b) {
+                            return (0,
+                            d.jsx)("div", {
+                                "data-aos": "zoom-in-left",
+                                children: (0,
+                                d.jsx)("div", {
+                                    onClick: function() {
+                                        return g(b)
+                                    },
+                                    className: "mk-works-tab-left-button ".concat(e === b ? "mk-works-tab-left-button-selected" : ""),
+                                    children: a.company
+                                })
+                            }, b)
+                        })
+                    }), (0,
+                    d.jsx)("div", {
+                        className: "mk-works-tab-right",
+                        children: h && (0,
+                        d.jsxs)(d.Fragment, {
+                            children: [(0,
+                            d.jsx)("div", {
+                                "data-aos": "zoom-in-right",
+                                className: "mk-works-tab-right-title",
+                                children: "".concat(h.role, " @ ").concat(h.company)
+                            }), (0,
+                            d.jsx)("div", {
+                                "data-aos": "zoom-in-right",
+                                className: "mk-works-tab-right-duration",
+                                children: h.duration
+                            }), (0,
+                            d.jsx)("div", {
+                                "data-aos": "zoom-in-right",
+                                className: "mk-works-tab-right-list",
+                                children: (h.points || []).map(function(a, b) {
+                                    return (0,
+                                    d.jsx)(Z, {
+                                        text: a
+                                    }, b)
+                                })
+                            })]
+                        })
+                    })]
+                })
+            })
+        }
+          , _ = function(a) {
+            var b = a.data
+              , c = b.heading
+              , e = b.experiences;
+            return (0,
+            d.jsx)("div", {
+                className: "mk-works",
+                children: (0,
+                d.jsx)("div", {
+                    className: "container h100per-min100vh d-flex justify-content-center",
+                    children: (0,
+                    d.jsxs)("div", {
+                        "data-aos": "fade-down-left",
+                        className: "mk-works-container",
+                        children: [(0,
+                        d.jsx)(o.Z, {
+                            text: c
+                        }), (0,
+                        d.jsx)($, {
+                            list: e
+                        })]
+                    })
+                })
+            })
+        };
+        _.propTypes = {};
+        var aa = _
+          , ab = c(6269)
+          , ac = c(7548)
+          , ad = c(6049)
+          , ae = function(a) {
+            return (0,
+            d.jsxs)("svg", (0,
+            h.Z)((0,
+            g.Z)({}, a), {
+                version: "1.2",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 1000 1000",
+                width: "1000",
+                height: "1000",
+                children: [(0,
+                d.jsx)("title", {
+                    children: "A"
+                }), (0,
+                d.jsx)("g", {
+                    id: "Folder 1",
+                    fill: "inherit",
+                    children: (0,
+                    d.jsx)("path", {
+                        id: "Shape 8",
+                        fillRule: "evenodd",
+                        className: "s0",
+                        d: "m558 619l1-19 1-16v-9l1-6 2-6 10-10 4-2h5l4 4 3 16-1 27-3 66-3 83-37 148 8-115v-12l2-27 8-25 3-12 7-52 5-44h-11l-2 4-1 9zm22-18.6c0.2 0-0.3-5.2-0.6-6.2-1.6-5.1 0.6-11.3-5.8-13.2-2.7-0.9-5.6 2.1-6.3 4.7-1.4 5.5-0.6 9.5-1.3 15.3 0 0 13.7-0.5 14-0.6z"
+                    })
+                }), (0,
+                d.jsx)("path", {
+                    id: "Layer 2",
+                    fill: "none",
+                    className: "s1",
+                    d: "m0 0h1000v1000h-1000z"
+                })]
+            }))
+        };
+        ae.propTypes = {},
+        (function(a) {
+            return (0,
+            d.jsxs)("svg", (0,
+            h.Z)((0,
+            g.Z)({}, a), {
+                version: "1.2",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 1000 1000",
+                width: "1000",
+                height: "1000",
+                children: [(0,
+                d.jsx)("title", {
+                    children: "B"
+                }), (0,
+                d.jsx)("g", {
+                    id: "Folder 1",
+                    fill: "inherit",
+                    children: (0,
+                    d.jsx)("path", {
+                        id: "Shape 15",
+                        fillRule: "evenodd",
+                        className: "s0",
+                        d: "m644 153l-6-5-12-12.3 17 0.3 7.8-4.4 10.7-4.9c0 0 19.7 1 24.8 8 8.3 11.8-3.3 19.3-3.3 19.3 0 0 22.9-6.7 39.8 18 20.7 30.2-36.5 44.2-36.5 44.2 0 0-40.4 4.4-77.8 2.3-71.5-4-113.3-5-113.3-5l27.8-1.5 14-2 32-2 33.3-1.5 46.5-3.8c-0.1 0 54-1.7 38.7-22.2-17.9-24.1-41 6.5-41 6.5zm13-2.5c0.3 7.3 15.3 11.1 16.1-1.1 0.5-8.2-1.1-10-8-10.2-8.7-0.1-8.4 1-8.1 11.3z"
+                    })
+                }), (0,
+                d.jsx)("path", {
+                    id: "Layer 2",
+                    fill: "none",
+                    className: "s1",
+                    d: "m0 0h1000v1000h-1000z"
+                })]
+            }))
+        }
+        ).propTypes = {},
+        (function(a) {
+            return (0,
+            d.jsxs)("svg", (0,
+            h.Z)((0,
+            g.Z)({}, a), {
+                version: "1.2",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 1000 1000",
+                width: "1000",
+                height: "1000",
+                children: [(0,
+                d.jsx)("title", {
+                    children: "E1"
+                }), (0,
+                d.jsx)("g", {
+                    id: "Folder 1",
+                    fill: "inherit",
+                    children: (0,
+                    d.jsx)("path", {
+                        id: "Shape 13",
+                        className: "s0",
+                        d: "m593.6 144.4l8.4 8.6c0 0-10.1 0.5-15.1 8.4-3.1 4.8-2.9 10.6-2.9 10.6l16.4 5.2-16.4 2.8 4 6 10-1h7l-1 9-13 2h-11l-6-6-5-8 1-14 3-11 6.2-8.9 7.8-3.1 5-0.5z"
+                    })
+                }), (0,
+                d.jsx)("path", {
+                    id: "Layer 2",
+                    fill: "none",
+                    className: "s1",
+                    d: "m0 0h1000v1000h-1000z"
+                })]
+            }))
+        }
+        ).propTypes = {},
+        (function(a) {
+            return (0,
+            d.jsxs)("svg", (0,
+            h.Z)((0,
+            g.Z)({}, a), {
+                version: "1.2",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 1000 1000",
+                width: "1000",
+                height: "1000",
+                children: [(0,
+                d.jsx)("title", {
+                    children: "E2"
+                }), (0,
+                d.jsx)("g", {
+                    id: "Folder 1",
+                    fill: "inherit",
+                    children: (0,
+                    d.jsx)("path", {
+                        id: "Shape 14",
+                        className: "s0",
+                        d: "m635.4 155.2l-11.4 1.8-11 9 24.6-0.8-16.6 9.8 21.4 0.2c-1.8 4.6-7.2 10.4-8.4 10.8-1.8 0.6-9.7 1.3-12.6 1.2-7-0.3-18.1-4.9-19-15.8-2.6-32.4 23.2-25.4 23.2-25.4z"
+                    })
+                }), (0,
+                d.jsx)("path", {
+                    id: "Layer 2",
+                    fill: "none",
+                    className: "s1",
+                    d: "m0 0h1000v1000h-1000z"
+                })]
+            }))
+        }
+        ).propTypes = {},
+        (function(a) {
+            return (0,
+            d.jsxs)("svg", (0,
+            h.Z)((0,
+            g.Z)({}, a), {
+                version: "1.2",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 1000 1000",
+                width: "1000",
+                height: "1000",
+                children: [(0,
+                d.jsx)("title", {
+                    children: "H"
+                }), (0,
+                d.jsx)("g", {
+                    id: "Folder 1",
+                    fill: "inherit",
+                    children: (0,
+                    d.jsx)("path", {
+                        id: "Shape 7",
+                        className: "s0",
+                        d: "m521 579l10-10 1 19 5 1 1-11 15-22-1 63v9l-11-8-4-16-1-5-7-1 2 11-10-4z"
+                    })
+                }), (0,
+                d.jsx)("path", {
+                    id: "Layer 2",
+                    fill: "none",
+                    className: "s1",
+                    d: "m0 0h1000v1000h-1000z"
+                })]
+            }))
+        }
+        ).propTypes = {},
+        (function(a) {
+            return (0,
+            d.jsxs)("svg", (0,
+            h.Z)((0,
+            g.Z)({}, a), {
+                version: "1.2",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 1000 1000",
+                width: "1000",
+                height: "1000",
+                children: [(0,
+                d.jsx)("title", {
+                    children: "K1"
+                }), (0,
+                d.jsx)("g", {
+                    id: "Folder 1",
+                    fill: "inherit",
+                    children: (0,
+                    d.jsx)("path", {
+                        id: "Shape 4",
+                        className: "s0",
+                        d: "m527 307l48-62-8 50-3 22-7 31-35 184-14 80v67 34l-12-40 5-115z"
+                    })
+                }), (0,
+                d.jsx)("path", {
+                    id: "Layer 2",
+                    fill: "none",
+                    className: "s1",
+                    d: "m0 0h1000v1000h-1000z"
+                })]
+            }))
+        }
+        ).propTypes = {},
+        (function(a) {
+            return (0,
+            d.jsxs)("svg", (0,
+            h.Z)((0,
+            g.Z)({}, a), {
+                version: "1.2",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 1000 1000",
+                width: "1000",
+                height: "1000",
+                children: [(0,
+                d.jsx)("title", {
+                    children: "K2"
+                }), (0,
+                d.jsx)("g", {
+                    id: "Folder 1",
+                    fill: "inherit",
+                    children: (0,
+                    d.jsx)("path", {
+                        id: "Shape 5",
+                        className: "s0",
+                        d: "m633 384l182-108-297 294-182 199-54 49 85-106 111-129 86-96z"
+                    })
+                }), (0,
+                d.jsx)("path", {
+                    id: "Layer 2",
+                    fill: "none",
+                    className: "s1",
+                    d: "m0 0h1000v1000h-1000z"
+                })]
+            }))
+        }
+        ).propTypes = {},
+        (function(a) {
+            return (0,
+            d.jsxs)("svg", (0,
+            h.Z)((0,
+            g.Z)({}, a), {
+                version: "1.2",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 1000 1000",
+                width: "1000",
+                height: "1000",
+                children: [(0,
+                d.jsx)("title", {
+                    children: "K3"
+                }), (0,
+                d.jsx)("g", {
+                    id: "Folder 1",
+                    fill: "inherit",
+                    children: (0,
+                    d.jsx)("path", {
+                        id: "Shape 6",
+                        className: "s0",
+                        d: "m185 338l188 67 105 148 35 50 249 210 52 113-348-338-147-125-123-102z"
+                    })
+                }), (0,
+                d.jsx)("path", {
+                    id: "Layer 2",
+                    fill: "none",
+                    className: "s1",
+                    d: "m0 0h1000v1000h-1000z"
+                })]
+            }))
+        }
+        ).propTypes = {},
+        (function(a) {
+            return (0,
+            d.jsxs)("svg", (0,
+            h.Z)((0,
+            g.Z)({}, a), {
+                version: "1.2",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 1000 1000",
+                width: "1000",
+                height: "1000",
+                children: [(0,
+                d.jsx)("title", {
+                    children: "M"
+                }), (0,
+                d.jsx)("g", {
+                    id: "Folder 1",
+                    fill: "inherit",
+                    children: (0,
+                    d.jsx)("path", {
+                        id: "Shape 2",
+                        className: "s0",
+                        d: "m416 429l-56-117 33-110 36 81v-79l56-67 35 558-52 196-22-117 51-103-34-401-12 111-56-94z"
+                    })
+                }), (0,
+                d.jsx)("path", {
+                    id: "Layer 2",
+                    fill: "none",
+                    className: "s1",
+                    d: "m0 0h1000v1000h-1000z"
+                })]
+            }))
+        }
+        ).propTypes = {},
+        (function(a) {
+            return (0,
+            d.jsxs)("svg", (0,
+            h.Z)((0,
+            g.Z)({}, a), {
+                version: "1.2",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 1000 1000",
+                width: "1000",
+                height: "1000",
+                children: [(0,
+                d.jsx)("title", {
+                    children: "N"
+                }), (0,
+                d.jsx)("g", {
+                    id: "Folder 1",
+                    fill: "inherit",
+                    children: (0,
+                    d.jsx)("path", {
+                        id: "Shape 12",
+                        className: "s0",
+                        d: "m536 194l-4-46 16-15 3 26 3 19 5-45-6-23-5-13 22-24 1 62-6 41-2 16-1 5-18-24v16z"
+                    })
+                }), (0,
+                d.jsx)("path", {
+                    id: "Layer 2",
+                    fill: "none",
+                    className: "s1",
+                    d: "m0 0h1000v1000h-1000z"
+                })]
+            }))
+        }
+        ).propTypes = {},
+        (function(a) {
+            return (0,
+            d.jsxs)("svg", (0,
+            h.Z)((0,
+            g.Z)({}, a), {
+                version: "1.2",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 1000 1000",
+                width: "1000",
+                height: "1000",
+                children: [(0,
+                d.jsx)("title", {
+                    children: "N2"
+                }), (0,
+                d.jsx)("g", {
+                    id: "Folder 1",
+                    fill: "inherit",
+                    children: (0,
+                    d.jsx)("path", {
+                        id: "Shape 10",
+                        className: "s0",
+                        d: "m595 580l18-10 12 38 6-37 3-22 13-52 18-59 26 65-15 15-11 16-10 21-27 77-20-37 2 24-3 12h-10z"
+                    })
+                }), (0,
+                d.jsx)("path", {
+                    id: "Layer 2",
+                    fill: "none",
+                    className: "s1",
+                    d: "m0 0h1000v1000h-1000z"
+                })]
+            }))
+        }
+        ).propTypes = {},
+        (function(a) {
+            return (0,
+            d.jsxs)("svg", (0,
+            h.Z)((0,
+            g.Z)({}, a), {
+                version: "1.2",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 1000 1000",
+                width: "1000",
+                height: "1000",
+                children: [(0,
+                d.jsx)("title", {
+                    children: "U"
+                }), (0,
+                d.jsx)("g", {
+                    id: "Folder 1",
+                    fill: "inherit",
+                    children: (0,
+                    d.jsx)("path", {
+                        id: "Shape 11",
+                        className: "s0",
+                        d: "m494 161.9c1.5-13.3 5.1-14.7 5.1-14.7l6.2-4.3-2.3 16.1 3 19 2 10 6-3-4-27c0 0 2-7.8 4.6-9.8 3.9-2.8 8.4-3.2 8.4-3.2l3 17 3 27c0 0-1.3 15.4-17.9 14.9-11.1-0.4-15.1-12.9-15.1-12.9 0 0-3-20.6-2-29.1z"
+                    })
+                }), (0,
+                d.jsx)("path", {
+                    id: "Layer 2",
+                    fill: "none",
+                    className: "s1",
+                    d: "m0 0h1000v1000h-1000z"
+                })]
+            }))
+        }
+        ).propTypes = {};
+        var af = c(1351);
+        function ag(a) {
+            var a = null !== a ? a : (0,
+            af.Z)(TypeError("Cannot destructure undefined"))
+              , b = (0,
+            f.useRef)()
+              , c = (0,
+            f.useState)(!1)
+              , e = c[0]
+              , g = c[1];
+            (0,
+            f.useEffect)(function() {
+                window.addEventListener("scroll", i),
+                i()
+            }, []);
+            var h = function() {
+                var a, c = null == b ? void 0 : null === (a = b.current) || void 0 === a ? void 0 : a.getBoundingClientRect();
+                return (null == c ? void 0 : c.top) < window.innerHeight / 2
+            }
+              , i = function() {
+                g(h())
+            };
+            return (0,
+            d.jsx)("div", {
+                style: {
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center"
+                },
+                ref: b,
+                className: "mk-muneeb-khan ".concat(e ? "mk-muneeb-khan-visible" : ""),
+                children: (0,
+                d.jsx)(ah, {})
+            })
+        }
+        var ah = function(a) {
+            return (0,
+            d.jsxs)("svg", (0,
+            h.Z)((0,
+            g.Z)({
+                xmlns: "http://www.w3.org/2000/svg",
+                xmlSpace: "preserve",
+                viewBox: "0 0 100 100"
+            }, a), {
+                style: {
+                    height: 300,
+                    width: 300
+                },
+                children: [(0,
+                d.jsx)("circle", {
+                    cx: 50,
+                    cy: 50,
+                    r: 47,
+                    fill: "none",
+                    stroke: "#808080",
+                    strokeDasharray: "14.2472,14.2472",
+                    strokeMiterlimit: 15,
+                    strokeWidth: 6,
+                    children: (0,
+                    d.jsx)("animateTransform", {
+                        attributeName: "transform",
+                        attributeType: "XML",
+                        dur: "5s",
+                        from: "0 50 50",
+                        repeatCount: "indefinite",
+                        to: "360 50 50",
+                        type: "rotate"
+                    })
+                }), (0,
+                d.jsx)("circle", {
+                    cx: 50,
+                    cy: 50,
+                    r: 39,
+                    fill: "none",
+                    stroke: "#808080",
+                    strokeDasharray: "10,10",
+                    strokeMiterlimit: 10,
+                    children: (0,
+                    d.jsx)("animateTransform", {
+                        attributeName: "transform",
+                        attributeType: "XML",
+                        dur: "5s",
+                        from: "0 50 50",
+                        repeatCount: "indefinite",
+                        to: "-360 50 50",
+                        type: "rotate"
+                    })
+                }), (0,
+                d.jsxs)("g", {
+                    fill: "#808080",
+                    children: [(0,
+                    d.jsx)("path", {
+                        d: "M30 35h5v30h-5z",
+                        children: (0,
+                        d.jsx)("animateTransform", {
+                            attributeName: "transform",
+                            begin: .1,
+                            dur: "1s",
+                            repeatCount: "indefinite",
+                            type: "translate",
+                            values: "0 5 ; 0 -5; 0 5"
+                        })
+                    }), (0,
+                    d.jsx)("path", {
+                        d: "M40 35h5v30h-5z",
+                        children: (0,
+                        d.jsx)("animateTransform", {
+                            attributeName: "transform",
+                            begin: .2,
+                            dur: "1s",
+                            repeatCount: "indefinite",
+                            type: "translate",
+                            values: "0 5 ; 0 -5; 0 5"
+                        })
+                    }), (0,
+                    d.jsx)("path", {
+                        d: "M50 35h5v30h-5z",
+                        children: (0,
+                        d.jsx)("animateTransform", {
+                            attributeName: "transform",
+                            begin: .3,
+                            dur: "1s",
+                            repeatCount: "indefinite",
+                            type: "translate",
+                            values: "0 5 ; 0 -5; 0 5"
+                        })
+                    }), (0,
+                    d.jsx)("path", {
+                        d: "M60 35h5v30h-5z",
+                        children: (0,
+                        d.jsx)("animateTransform", {
+                            attributeName: "transform",
+                            begin: .4,
+                            dur: "1s",
+                            repeatCount: "indefinite",
+                            type: "translate",
+                            values: "0 5 ; 0 -5; 0 5"
+                        })
+                    }), (0,
+                    d.jsx)("path", {
+                        d: "M70 35h5v30h-5z",
+                        children: (0,
+                        d.jsx)("animateTransform", {
+                            attributeName: "transform",
+                            begin: .5,
+                            dur: "1s",
+                            repeatCount: "indefinite",
+                            type: "translate",
+                            values: "0 5 ; 0 -5; 0 5"
+                        })
+                    })]
+                })]
+            }))
+        };
+        ag.displayName = "LoadingComp",
+        (function() {
+            var a = (0,
+            f.useState)(!0)
+              , b = a[0]
+              , c = a[1];
+            return (0,
+            f.useEffect)(function() {
+                setTimeout(function() {
+                    document.documentElement.style.setProperty("--scrollBarWidth", "8px"),
+                    c(!1)
+                }, 1500)
+            }, []),
+            (0,
+            d.jsxs)("div", {
+                className: "mk-pre-loader ".concat(b ? "mk-pre-loader-enabled" : "mk-pre-loader-disabled"),
+                children: [(0,
+                d.jsx)("div", {
+                    className: "mk-pre-loader-boarder"
+                }), (0,
+                d.jsx)("div", {
+                    className: "mk-pre-loader-container",
+                    children: (0,
+                    d.jsx)(ag, {})
+                })]
+            })
+        }
+        ).propTypes = {};
+        var ai = function(a) {
+            return (0,
+            d.jsxs)("svg", (0,
+            h.Z)((0,
+            g.Z)({}, a), {
+                xmlns: "http://www.w3.org/2000/svg",
+                role: "img",
+                viewBox: "0 0 24 24",
+                fill: "none",
+                stroke: "currentColor",
+                strokeWidth: "2",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                className: "feather feather-external-link",
+                children: [(0,
+                d.jsx)("title", {
+                    children: "External Link"
+                }), (0,
+                d.jsx)("path", {
+                    d: "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                }), (0,
+                d.jsx)("polyline", {
+                    points: "15 3 21 3 21 9"
+                }), (0,
+                d.jsx)("line", {
+                    x1: "10",
+                    y1: "14",
+                    x2: "21",
+                    y2: "3"
+                })]
+            }))
+        };
+        ai.propTypes = {};
+        var aj = ai
+          , ak = function(a) {
+            var b = a.logo
+              , c = a.title
+              , e = a.link
+              , f = a.date
+              , g = a.platform
+              , h = a.handleIconClick;
+            return (0,
+            d.jsxs)("div", {
+                className: "mk-item-body p-4",
+                children: [(0,
+                d.jsxs)("div", {
+                    className: "mk-item-head",
+                    children: [(0,
+                    d.jsx)("div", {
+                        style: {
+                            backgroundImage: "url(".concat(b, ")")
+                        },
+                        className: "mk-item-logo"
+                    }), (0,
+                    d.jsx)("div", {
+                        className: "mk-item-share",
+                        children: e && (0,
+                        d.jsx)(aj, {
+                            onClick: function() {
+                                return h(e)
+                            },
+                            width: 22,
+                            height: 22
+                        }, "share")
+                    })]
+                }), (0,
+                d.jsxs)("div", {
+                    className: "flex-1",
+                    children: [(0,
+                    d.jsx)("div", {
+                        className: "mk-item-title",
+                        children: c
+                    }), (0,
+                    d.jsx)("div", {
+                        className: "mk-item-platform",
+                        children: g
+                    })]
+                }), (0,
+                d.jsx)("div", {
+                    className: "mk-item-date",
+                    children: f
+                })]
+            })
+        }
+          , al = function(a) {
+            var b = a.list
+              , c = a.handleIconClick;
+            return (0,
+            d.jsx)("div", {
+                className: "row",
+                children: (b || []).map(function(a, b) {
+                    return (0,
+                    d.jsx)("div", {
+                        "data-aos": a.aos,
+                        className: "mk-certifications-item m-0 p-1\n            col-12 col-lg-".concat(4 * a.size),
+                        children: (0,
+                        d.jsx)(ak, (0,
+                        h.Z)((0,
+                        g.Z)({}, a), {
+                            handleIconClick: c
+                        }))
+                    }, b)
+                })
+            })
+        }
+          , am = function(a) {
+            var b = a.data
+              , c = b.heading
+              , e = b.list
+              , f = b.handleIconClick;
+            return (0,
+            d.jsx)("div", {
+                className: "mk-certifications",
+                children: (0,
+                d.jsxs)("div", {
+                    className: "container p-3",
+                    children: [(0,
+                    d.jsx)("div", {
+                        className: "mk-certifications-top-background"
+                    }), (0,
+                    d.jsxs)("div", {
+                        className: "mk-certifications-container",
+                        children: [(0,
+                        d.jsx)(o.Z, {
+                            text: c
+                        }), (0,
+                        d.jsx)("div", {
+                            children: (0,
+                            d.jsx)(al, {
+                                list: e,
+                                handleIconClick: f
+                            })
+                        })]
+                    })]
+                })
+            })
+        };
+        am.propTypes = {};
+        var an = am
+          , ao = {
+            heading: "Licenses & certifications",
+            list: [{
+                size: 1,
+                title: "Full Stack Developer",
+                platform: "DigiPakistan",
+                link: "https://firebasestorage.googleapis.com/v0/b/muhammadaamirmalikpro.appspot.com/o/FullStackDevelopement-DigiPakistan.jpg?alt=media&token=9b01f003-460c-4bc9-be6b-7f41b9bcc997",
+                date: "Issued Dec 2023 \xb7 No Expiration Date",
+                logo: "/assets/DigiPakistan.png",
+                aos: "zoom-out-left"
+            }, {
+                size: 1,
+                title: "MERN Stack Developer",
+                platform: "Jawan Pakistan",
+                link: "https://firebasestorage.googleapis.com/v0/b/muhammadaamirmalikpro.appspot.com/o/MERN%20Stack%20Developer-JawanPakistan.jpeg?alt=media&token=ac5f113c-96d0-451e-b4ad-790d1bf754bc",
+                date: "Issued FEB 2022 \xb7 No Expiration Date",
+                logo: "/assets/JawanPakistan.jpeg",
+                aos: "zoom-out-right"
+            }, {
+                size: 1,
+                title: "Aws, MicroServices & Serverless framework",
+                platform: "Self Learning",
+                link: "https://firebasestorage.googleapis.com/v0/b/muhammadaamirmalikpro.appspot.com/o/S%20Learning%20-%20Serverless%20with%20%20AWS%20%26%20MicroServices.png?alt=media&token=dc6cbf92-d053-41a0-a3bb-59561be4a5d8",
+                date: "Issued Aug 2022 \xb7 No Expiration Date",
+                logo: "/assets/aws.png",
+                aos: "zoom-out-left"
+            }, {
+                size: 1,
+                title: "SEO - Search Engine Optimization",
+                platform: "DigiSkills",
+                link: "https://firebasestorage.googleapis.com/v0/b/muhammadaamirmalikpro.appspot.com/o/SEO%20-%20DigiSkills_1.jpg?alt=media&token=fdf0ad71-aed6-4ab9-a210-8473400762c4",
+                date: "Issued Aug 2020 \xb7 No Expiration DateIssued",
+                logo: "/assets/DigiSkills.png",
+                aos: "zoom-out-right"
+            }, {
+                size: 1,
+                title: "WordPress Developer",
+                platform: "DigiSkills",
+                link: "https://firebasestorage.googleapis.com/v0/b/muhammadaamirmalikpro.appspot.com/o/WordPress-%20DigiSkills_1.jpg?alt=media&token=fa75c088-4d5e-48e5-aa22-7dc09e77b440",
+                date: "Issued Aug 2020 \xb7 No Expiration Date",
+                logo: "/assets/DigiSkills.png",
+                aos: "zoom-out-left"
+            }, {
+                size: 1,
+                title: "Graphic Designer",
+                platform: "DigiSkills",
+                link: "https://firebasestorage.googleapis.com/v0/b/muhammadaamirmalikpro.appspot.com/o/Graphic%20Desing%20-%20DigiSkills_1.jpg?alt=media&token=15bdec1f-7c34-4ec3-bafe-a2f8b3e3a89f",
+                date: "Issued May 2020 \xb7 No Expiration Date",
+                logo: "/assets/DigiSkills.png",
+                aos: "zoom-out-left"
+            }, ],
+            handleIconClick: c(1312).nG
+        }
+          , ap = c(1519)
+          , aq = c(5755)
+          , ar = function(a) {
+            var b = a.children
+              , c = a.id;
+            return (0,
+            d.jsx)("div", {
+                id: c,
+                className: "view-element",
+                children: b
+            })
+        };
+        function as() {
+            return (0,
+            d.jsxs)(d.Fragment, {
+                children: [(0,
+                d.jsx)(ad.Z, {}), (0,
+                d.jsxs)(e.Xu, {
+                    children: [(0,
+                    d.jsx)(Y.Z, {}), (0,
+                    d.jsx)(m, {}), (0,
+                    d.jsx)(n.Z, {
+                        data: ab.Fs
+                    }), (0,
+                    d.jsx)(X.Z, {
+                        data: ac.Z
+                    }), (0,
+                    d.jsx)(ar, {
+                        id: "home",
+                        children: (0,
+                        d.jsx)(J, {
+                            data: ab.L9
+                        })
+                    }), (0,
+                    d.jsx)(ar, {
+                        id: "my-self",
+                        children: (0,
+                        d.jsx)(y, {
+                            data: ab.GX
+                        })
+                    }), (0,
+                    d.jsx)(ar, {
+                        id: "experience",
+                        children: (0,
+                        d.jsx)(aa, {
+                            data: ab._B
+                        })
+                    }), (0,
+                    d.jsx)(ar, {
+                        id: "my-work",
+                        children: (0,
+                        d.jsx)(S, {
+                            data: ab.q
+                        })
+                    }), (0,
+                    d.jsx)(ar, {
+                        id: "reviews",
+                        children: (0,
+                        d.jsx)(W, {
+                            data: ab.A9
+                        })
+                    }), (0,
+                    d.jsx)(ar, {
+                        id: "certifications",
+                        children: (0,
+                        d.jsx)(an, {
+                            data: ao
+                        })
+                    }), (0,
+                    d.jsx)(ar, {
+                        id: "contributions",
+                        children: (0,
+                        d.jsx)(q, {
+                            data: ab.Qp
+                        })
+                    }), (0,
+                    d.jsx)(ar, {
+                        id: "contact",
+                        children: (0,
+                        d.jsx)(j, {
+                            data: ab.PX
+                        })
+                    }), (0,
+                    d.jsx)(ap.c, {}), (0,
+                    d.jsx)(aq.c, {})]
+                })]
+            })
+        }
     }
 }, function(a) {
-    var b = function(b) {
-        return a(a.s = b)
-    };
-    a.O(0, [774, 179], function() {
-        return b(1118),
-        b(387)
+    a.O(0, [585, 87, 594, 774, 888, 179], function() {
+        var b;
+        return a(a.s = 5557)
     }),
     _N_E = a.O()
 }
 ])
-
